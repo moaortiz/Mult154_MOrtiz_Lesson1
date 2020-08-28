@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     private Rigidbody rbPlayer;
+    private Vector3 direction = Vector3.zero;
+    public float speed = 10.0f;
     
         
     void Start()
@@ -12,10 +14,17 @@ public class PlayerMovement : MonoBehaviour
         rbPlayer = GetComponent<Rigidbody>();
     }
 
-     void Update()
+    private void Update()
     {
-       float horMove = Input.GetAxis("Horizontal");
+        float horMove = Input.GetAxis("Horizontal");
+        float verMove = Input.GetAxis("Vertical");
 
-        rbPlayer.AddForce(new Vector3(horMove, 0, 0),ForceMode.Impulse);
+        direction = new Vector3(horMove, 0, verMove);
+    }
+
+    void FixedUpdate()
+    {
+       
+       rbPlayer.AddForce(direction * speed,ForceMode.Force);
     }
 }
