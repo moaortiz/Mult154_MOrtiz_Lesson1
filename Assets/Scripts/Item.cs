@@ -8,7 +8,7 @@ public class Item : MonoBehaviour
     {
         BEET,
         CARROT,
-        RADDISH
+        RADISH
     }
 
     public VegetableType typeOfVeggie;
