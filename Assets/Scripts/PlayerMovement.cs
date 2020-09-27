@@ -38,6 +38,18 @@ public class PlayerMovement : NetworkBehaviour
         direction = new Vector3(horMove, 0, verMove);
     }
 
+    void OnDrawGizmos()
+    {
+        /*Gizmos.color = Color.yellow;
+        Gizmos.DrawRay(transform.position, direction * 10);
+        Gizmos.color = Color.magenta;
+        Gizmos.DrawRay(transform.position, rbPlayer.velocity * 5);*/
+        Gizmos.color = Color.cyan;
+        Gizmos.DrawWireCube(transform.position, new Vector3(6,6,6));
+    }
+
+    
+
     void FixedUpdate()
     {
         if (!isLocalPlayer)
@@ -64,7 +76,8 @@ public class PlayerMovement : NetworkBehaviour
         {
             index++;
         }
-        rbPlayer.MovePosition(spawnPoint[index].transform.position); 
+        rbPlayer.MovePosition(spawnPoint[index].transform.position);
+        rbPlayer.velocity = Vector3.zero;
     }
 
     private void OnTriggerExit(Collider other)
