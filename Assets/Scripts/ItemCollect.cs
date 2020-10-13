@@ -46,6 +46,7 @@ public class ItemCollect : NetworkBehaviour
         Debug.Log("CommandItemCollected: " + itemType);
         RpcItemCollected(itemType);
     }
+
     [ClientRpc]
     void RpcItemCollected(Item.VegetableType itemType)
     {
