@@ -7,7 +7,7 @@ public class Patrol : MonoBehaviour
 {
     public List<GameObject> wayPoints;
     private NavMeshAgent agent;
-    private const float WP_THRESHOLD = 5.0F;
+    private const float WP_THRESHOLD = 5.0f;
     private GameObject currentWP;
     private int currentWPIndex = -1;
 
@@ -15,6 +15,7 @@ public class Patrol : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         currentWP = GetNextWaypoint();
+        agent.SetDestination(currentWP.transform.position);
     }
 
     GameObject GetNextWaypoint()
