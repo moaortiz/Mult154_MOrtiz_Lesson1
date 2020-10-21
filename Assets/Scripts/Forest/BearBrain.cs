@@ -26,6 +26,7 @@ public class BearBrain : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.DrawRay(transform.position, transform.forward * 10, Color.blue);
         if (hiveDropped)
         {
             bot.Seek(hivePos);
@@ -42,6 +43,7 @@ public class BearBrain : MonoBehaviour
             }
             else
             {
+                
                 bot.Wander();
             }
         }

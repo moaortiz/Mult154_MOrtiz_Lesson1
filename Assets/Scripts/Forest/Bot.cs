@@ -149,10 +149,10 @@ public class Bot : MonoBehaviour
     public bool CanSeeTarget()
     {
         RaycastHit raycastInfo;
-        Vector3 targetXZPos = new Vector3(target.transform.position.x, 1.5f, target.transform.position.y);
-        Vector3 thisXZPos = new Vector3(transform.position.x, 1.5f, transform.position.y);
+        Vector3 targetXZPos = new Vector3(target.transform.position.x, 1.5f, target.transform.position.z);
+        Vector3 thisXZPos = new Vector3(transform.position.x, 1.5f, transform.position.z);
         Vector3 rayToTarget = targetXZPos - thisXZPos;
-        //Debug.DrawRay();
+        Debug.DrawRay(thisXZPos, rayToTarget *10 , Color.red);
         if (Physics.Raycast(thisXZPos, rayToTarget, out raycastInfo))
         {
             if (raycastInfo.transform.gameObject.tag == "Player")
