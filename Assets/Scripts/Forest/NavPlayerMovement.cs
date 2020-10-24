@@ -21,6 +21,7 @@ public class NavPlayerMovement : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Space))
         {
+            Debug.Log("Entered If statement");
             DroppedHive?.Invoke(transform.position + (transform.position * 10));
         }
         // Get the horizontal and vertical axis.
