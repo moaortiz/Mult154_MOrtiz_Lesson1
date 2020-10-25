@@ -386,6 +386,7 @@ GameObject:
   - component: {fileID: 160842464}
   - component: {fileID: 160842462}
   - component: {fileID: 160842465}
+  - component: {fileID: 160842466}
   m_Layer: 0
   m_Name: NavPlayer
   m_TagString: Player
@@ -453,6 +454,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.2675705, y: 1.6897051, z: 2.0159092}
   m_Center: {x: 0.0010299683, y: 0.78306377, z: 0.11092472}
+--- !u!135 &160842466
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160842461}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 20
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &247736132
 GameObject:
   m_ObjectHideFlags: 0
@@ -1469,7 +1483,7 @@ GameObject:
   - component: {fileID: 551549737}
   m_Layer: 0
   m_Name: Wasp
-  m_TagString: Untagged
+  m_TagString: Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1646,7 +1660,7 @@ GameObject:
   - component: {fileID: 659959706}
   m_Layer: 0
   m_Name: Wasp (2)
-  m_TagString: Untagged
+  m_TagString: Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1950,7 +1964,7 @@ GameObject:
   - component: {fileID: 692122072}
   m_Layer: 0
   m_Name: Wasp (4)
-  m_TagString: Untagged
+  m_TagString: Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2289,14 +2303,14 @@ MonoBehaviour:
       m_Item7:
         transform: {fileID: 0}
         weight: 0
-    m_Offset: {x: 0, y: 0, z: 0}
-    m_MinLimit: -180
-    m_MaxLimit: 180
+    m_Offset: {x: 0, y: 0, z: -90}
+    m_MinLimit: 45
+    m_MaxLimit: 135
     m_AimAxis: 2
     m_MaintainOffset: 1
     m_ConstrainedAxes:
       x: 0
-      y: 1
+      y: 0
       z: 1
   m_SourceObjectsGUIToggle: 1
   m_SettingsGUIToggle: 1
@@ -2736,7 +2750,7 @@ GameObject:
   - component: {fileID: 1202536976}
   m_Layer: 0
   m_Name: Wasp (3)
-  m_TagString: Untagged
+  m_TagString: Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3360,7 +3374,7 @@ GameObject:
   - component: {fileID: 1567870477}
   m_Layer: 0
   m_Name: Wasp (1)
-  m_TagString: Untagged
+  m_TagString: Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
