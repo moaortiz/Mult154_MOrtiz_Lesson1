@@ -27,7 +27,7 @@ public class NavPlayerMovement : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Space))
         {
-            Debug.Log("Entered If statement");
+            //Debug.Log("Entered If statement");
             DroppedHive?.Invoke(transform.position + (transform.forward * 10));
         }
         // Get the horizontal and vertical axis.
@@ -102,12 +102,12 @@ public class NavPlayerMovement : MonoBehaviour
 
         for(int i = 0; i < INTERVALS; i++)
         {
-            lookTarget.RotateAround(transform.position, Vector3.up, -angleInterval);
+            lookTarget.RotateAround(transform.position, Vector3.up, angleInterval);
             yield return new WaitForSeconds(INTERVAL);
         }
         for (int i = 0; i < INTERVALS; i++)
         {
-            lookTarget.RotateAround(transform.position, Vector3.up, angleInterval);
+            lookTarget.RotateAround(transform.position, Vector3.up, -angleInterval);
             yield return new WaitForSeconds(INTERVAL);
         }
     }
